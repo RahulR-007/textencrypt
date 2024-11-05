@@ -1,121 +1,159 @@
-/* styles.css */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
     color: #333;
     padding: 20px;
     margin: 0;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
 h1 {
     text-align: center;
-    color: #000000;
+    font-size: 2.2rem;
+    color: #34495e;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+/* Card-like Sections */
+.card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
 }
 
-textarea {
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* File Input Styling */
+.file-input {
     width: 100%;
-    padding: 15px;  /* Add padding inside the textarea */
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 10px;
     font-size: 1rem;
-    resize: vertical;
-    box-sizing: border-box;  /* Ensure padding doesn’t mess with width */
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-button {
-    background-color: #4CAF50;
+/* Button Styling */
+.btn {
+    background-color: #27ae60;
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin-right: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 12px 18px;
     font-size: 1rem;
-}
-
-button:hover {
-    background-color: #d9114d;
-}
-
-.output, .steps {
-    margin-top: 30px;
-}
-
-#resultText {
-    font-size: 1.5rem;
-    color: #ff0011;
-    word-break: break-word;
-}
-
-.steps ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.steps ul li {
-    background-color: #e7f9e9;
-    padding: 10px;
-    margin-bottom: 5px;
+    font-weight: 500;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
 }
 
-/* Responsive design adjustments */
-@media (max-width: 768px) {
+.btn:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+}
+
+/* Download Link Styling */
+.download-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.download-link:hover {
+    background-color: #2980b9;
+}
+
+/* Download Section Styling */
+.download-section {
+    margin-top: 15px;
+}
+
+/* Label Styling */
+label {
+    font-weight: 500;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
     .container {
+        padding: 20px;
+    }
+
+    .card {
         padding: 15px;
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
-    textarea {
+    .btn {
         font-size: 0.9rem;
     }
 
-    button {
+    .file-input {
         font-size: 0.9rem;
-        padding: 8px 12px;
     }
 
-    #resultText {
-        font-size: 1rem;
-    }
-
-    .steps ul li {
+    .download-link {
         font-size: 0.9rem;
     }
 }
 
-@media (max-width: 480px) {
-    button {
-        margin-bottom: 10px;
-        display: block;
-        width: 100%;
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
     }
 
-    textarea {
-        font-size: 0.8rem;
+    .card {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+    .file-input {
+        padding: 8px;
+    }
+
+    .download-link {
+        padding: 8px 12px;
+        font-size: 0.85rem;
     }
 }
