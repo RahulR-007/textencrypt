@@ -3,31 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Encryption & Decryption Tool</title>
+    <title>File Encryption & Decryption Tool</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Text Encryption & Decryption Tool</h1>
+        <h1>File Encryption & Decryption Tool</h1>
 
-        <div class="form-group">
-            <label for="inputText">Enter Text:</label>
-            <textarea id="inputText" placeholder="Enter text to encrypt or decrypt"></textarea>
+        <!-- Encryption Section -->
+        <div class="card">
+            <h3>Encrypt File</h3>
+            <label for="fileInputEncrypt">Select File to Encrypt:</label>
+            <input type="file" id="fileInputEncrypt" class="file-input">
+            <button class="btn" onclick="encryptFile()">Encrypt and Download</button>
+
+            <div id="downloadSectionEncrypt" class="download-section" style="display:none;">
+                <h3>Download Encrypted File:</h3>
+                <a id="downloadLinkEncrypt" href="#" class="download-link">Download Encrypted File</a>
+            </div>
+
+            <div id="downloadSectionPasskey" class="download-section" style="display:none;">
+                <h3>Download Passkey File:</h3>
+                <a id="downloadLinkPasskey" href="#" class="download-link">Download Passkey</a>
+            </div>
         </div>
 
-        <div class="form-group">
-            <button onclick="encryptText()">Encrypt</button>
-            <button onclick="decryptText()">Decrypt</button>
-        </div>
+        <!-- Decryption Section -->
+        <div class="card">
+            <h3>Decrypt File</h3>
+            <label for="fileInputDecrypt">Select Encrypted File:</label>
+            <input type="file" id="fileInputDecrypt" class="file-input">
 
-        <div class="output">
-            <h3>Encrypted/Decrypted Output:</h3>
-            <p id="resultText"></p>
-        </div>
+            <label for="passkeyFileInput">Select Passkey File:</label>
+            <input type="file" id="passkeyFileInput" class="file-input">
 
-        <div class="steps">
-            <h3>Steps:</h3>
-            <ul id="stepsList"></ul>
+            <button class="btn" onclick="decryptFile()">Decrypt and Download</button>
+
+            <div id="downloadSectionDecrypt" class="download-section" style="display:none;">
+                <h3>Download Decrypted File:</h3>
+                <a id="downloadLinkDecrypt" href="#" class="download-link">Download Decrypted File</a>
+            </div>
         </div>
     </div>
 
