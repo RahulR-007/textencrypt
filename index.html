@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Encryption & Decryption Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>File Encryption & Decryption Tool</h1>
+
+        <!-- Encryption Section -->
+        <div class="card">
+            <h3>Encrypt File</h3>
+            <label for="fileInputEncrypt">Select File to Encrypt:</label>
+            <input type="file" id="fileInputEncrypt" class="file-input">
+            <button class="btn" onclick="encryptFile()">Encrypt and Download</button>
+
+            <div id="downloadSectionEncrypt" class="download-section" style="display:none;">
+                <h3>Download Encrypted File:</h3>
+                <a id="downloadLinkEncrypt" href="#" class="download-link">Download Encrypted File</a>
+            </div>
+
+            <div id="downloadSectionPasskey" class="download-section" style="display:none;">
+                <h3>Download Passkey File:</h3>
+                <a id="downloadLinkPasskey" href="#" class="download-link">Download Passkey</a>
+            </div>
+        </div>
+
+        <!-- Decryption Section -->
+        <div class="card">
+            <h3>Decrypt File</h3>
+            <label for="fileInputDecrypt">Select Encrypted File:</label>
+            <input type="file" id="fileInputDecrypt" class="file-input">
+
+            <label for="passkeyFileInput">Select Passkey File:</label>
+            <input type="file" id="passkeyFileInput" class="file-input">
+
+            <button class="btn" onclick="decryptFile()">Decrypt and Download</button>
+
+            <div id="downloadSectionDecrypt" class="download-section" style="display:none;">
+                <h3>Download Decrypted File:</h3>
+                <a id="downloadLinkDecrypt" href="#" class="download-link">Download Decrypted File</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
