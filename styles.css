@@ -1,0 +1,121 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;  /* Add padding inside the textarea */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+    box-sizing: border-box;  /* Ensure padding doesn’t mess with width */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #d9114d;
+}
+
+.output, .steps {
+    margin-top: 30px;
+}
+
+#resultText {
+    font-size: 1.5rem;
+    color: #ff0011;
+    word-break: break-word;
+}
+
+.steps ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.steps ul li {
+    background-color: #e7f9e9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    #resultText {
+        font-size: 1rem;
+    }
+
+    .steps ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    textarea {
+        font-size: 0.8rem;
+    }
+}
